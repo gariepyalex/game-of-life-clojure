@@ -15,7 +15,7 @@
 
 (defn number-of-alive-neighbors
   [board position]
-  (let [neighbors (neighbors-of-cell board position)]
+  (let [neighbors (neighbors-of-position board position)]
     (count 
       (filter #(get % :alive?) 
         (map #(get board %) neighbors)))))
