@@ -40,13 +40,13 @@
 (deftest test-neighbors-set
   (testing
     (is (= #{[0 1] [1 0] [1 1]} 
-           (neighbors-of-cell test-board [0 0])))
+           (neighbors-of-position test-board [0 0])))
     (is (= #{[0 0] [0 2] [1 0] [1 1] [1 2]} 
-           (neighbors-of-cell test-board [0 1])))
+           (neighbors-of-position test-board [0 1])))
     (is (= #{[1 0] [3 0] [1 1] [2 1] [3 1]} 
-           (neighbors-of-cell test-board [2 0])))
+           (neighbors-of-position test-board [2 0])))
     (is (= #{[1 1] [1 2] [1 3] [2 1] [2 3] [3 1] [3 2] [3 3]} 
-           (neighbors-of-cell test-board [2 2])))))
+           (neighbors-of-position test-board [2 2])))))
 
 (deftest test-number-of-alive-neighbors
   (testing 
